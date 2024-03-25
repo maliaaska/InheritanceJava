@@ -14,6 +14,13 @@ public class Animal {
         this.weight = weight;
     }
 
+    public Animal() {
+
+    }
+
+    public Animal(double weight) {
+    }
+
     // Dodaję gettery i settery
 
     public AnimalSize getSize() {
