@@ -32,7 +32,15 @@ public class Dog extends Animal {
             return AnimalSize.BIG;
         }
     }
-
+    public void bark() {
+        if (barkVolume < 3) {
+            System.out.println("Cicho szczeka");
+        } else if (barkVolume < 7) {
+            System.out.println("Normalnie szczeka");
+        } else {
+            System.out.println("Głośno szczeka");
+        }
+    }
     public double getBarkVolume() {
         return barkVolume;
     }
@@ -47,5 +55,42 @@ public class Dog extends Animal {
 
     public void setBreed(String breed) {
         this.breed = breed;
+    }
+
+    public void run() {
+        System.out.println("Pies śmiga");
+    }
+
+    public void walk() {
+        System.out.println("Pies spaceruje");
+    }
+
+    public void wagTail() {
+        System.out.println("Pies merda ogonem");
+    }
+
+
+    //Przesłonięte metody
+    @Override
+    public void speak() {
+        bark();
+    }
+
+    @Override
+    public void makeMove(int speed) {
+        if (speed <= 5) {
+            walk();
+            wagTail();
+        } else {
+            run();
+            bark();
+        }
+    }
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "barkVolume=" + barkVolume +
+                ", breed='" + breed + '\'' +
+                '}';
     }
 }
