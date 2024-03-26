@@ -23,6 +23,8 @@ public class Dog extends Animal {
 
     }
 
+
+
     public static AnimalSize getSizeFromWeight(double weight) {
         if (weight <= 10) {
             return AnimalSize.SMALL;
