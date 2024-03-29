@@ -20,11 +20,34 @@ public class Person {
 
     }
 
-//    Year thisYear = Year.now();
-//
-//    public void yearPrint() {
-//        System.out.println(thisYear);
-//    }
+    Year thisYear = Year.now();
 
+    public void yearPrint() {
+        System.out.println(thisYear);
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getBirthYear() {
+        return birthYear;
+    }
+
+    public void setBirthYear(int birthYear) {
+        this.birthYear = birthYear;
+    }
+    // this is a method getting the current age
+    public int getAge(){
+        int value = this.thisYear.getValue();
+        int currentAge = value - birthYear;
+        System.out.println(currentAge);
+        return currentAge;
+    }
 
 }

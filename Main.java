@@ -1,5 +1,7 @@
 package com.milewskiarkadiuszmodul8.asmilewskiModul11;
 
+import java.time.Year;
+
 public class Main {
     public static void main( String[] args) {
 
@@ -20,8 +22,10 @@ public class Main {
 //        zoo.testAllAnimals();
 
 
-        Person person = new Person ("Carlos", 25 );
+        Person person = new Person ("Carlos", 1994 );
 //        person.yearPrint();
-        person.yearCheck(1950);
+        person.yearCheck(person.getBirthYear());
+        System.out.println(person.getBirthYear());
+        person.getAge();
     }
 }
