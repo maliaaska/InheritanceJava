@@ -23,9 +23,15 @@ public class Main {
 
 
         Person person = new Person ("Carlos", 1994 );
+        Employee employee = new Employee("Arek", 1990, 7000);
+        System.out.println(employee);
+
+
 //        person.yearPrint();
-        person.yearCheck(person.getBirthYear());
-        System.out.println(person.getBirthYear());
-        person.getAge();
+//        person.yearCheck(person.getBirthYear());
+//        System.out.println(person.getBirthYear());
+//        person.getAge();
+
+
     }
 }

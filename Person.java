@@ -50,4 +50,12 @@ public class Person {
         return currentAge;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", birthYear=" + birthYear +
+                ", thisYear=" + thisYear +
+                '}';
+    }
 }
