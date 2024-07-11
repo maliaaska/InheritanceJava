@@ -10,6 +10,10 @@ public class Employee extends Person {
         ++nextEmployeeId;
     }
 
+    public Employee(String name, int birthYear, Object o) {
+        super(name, birthYear);
+    }
+
     public double calculatePay() {
         return baseSalary;
     }

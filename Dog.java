@@ -77,7 +77,6 @@ public class Dog extends Animal {
     public void speak() {
         bark();
     }
-
     @Override
     public void makeMove(int speed) {
         if (speed <= 5) {
@@ -87,12 +86,14 @@ public class Dog extends Animal {
             run();
             bark();
         }
+        super.makeMove(speed);
     }
+
     @Override
     public String toString() {
         return "Dog{" +
                 "barkVolume=" + barkVolume +
                 ", breed='" + breed + '\'' +
-                '}';
+                "} " + super.toString();
     }
 }
