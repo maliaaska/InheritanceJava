@@ -11,13 +11,14 @@ public class Person {
         int length = Integer.parseInt(String.valueOf(String.valueOf(year).length()));
         if (year >= 1900 && year <= 2024 && length == 4) {
             System.out.println("the year is correct.");
-        } return true;
+        }
+         return true;
     }
 
     public Person(String name, int birthYear) {
         this.name = name;
-        this.birthYear = birthYear;
-
+        if(yearCheck(1990)) {this.birthYear = birthYear;
+        }
     }
 
     Year thisYear = Year.now();
