@@ -5,9 +5,11 @@ public class HourlyEmployee extends Employee {
     private double hourlyRate;
     private double overtimeRate;
 
-    public HourlyEmployee(String name, int birthYear, int hoursWorked, double hourlyRate, double overtimeRate) {
-        super(name, birthYear, 2000);
-        
+    public HourlyEmployee(String name, int birthYear, double baseSalary, int employeeId, int hoursWorked, double hourlyRate, double overtimeRate) {
+        super(name, birthYear, baseSalary, 3 );
+        this.hoursWorked = hoursWorked;
+        this.hourlyRate = hourlyRate;
+        this.overtimeRate = overtimeRate;
 
     }
 
@@ -26,7 +28,7 @@ public class HourlyEmployee extends Employee {
         if ( hoursWorked <= 160) {
             return super.getBaseSalary();
         } else {
-            return super.getBaseSalary() + overtimeRate;
+            return (hoursWorked - 160) * overtimeRate + (160 * hourlyRate) + super.getBaseSalary();
         }
     }
 
@@ -36,6 +38,7 @@ public class HourlyEmployee extends Employee {
                 "hoursWorked=" + hoursWorked +
                 ", hourlyRate=" + hourlyRate +
                 ", overtimeRate=" + overtimeRate +
+                ", Final Salary= " + calculatePay()  +
                 "} " + super.toString();
     }
 }

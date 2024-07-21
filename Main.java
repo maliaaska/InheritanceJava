@@ -31,8 +31,8 @@ public class Main {
         SalariedEmployee salariedEmployee = new SalariedEmployee("Krystian", 1984, 4023.02, 2, 500);
         System.out.println(salariedEmployee);
 
-        HourlyEmployee hourlyEmployee = new HourlyEmployee("Monica" , 1999, 174, 67.34, 140.23);
-
+        HourlyEmployee hourlyEmployee = new HourlyEmployee("Monica" , 1999, 1000, 3, 193, 45.23, 69.99);
+        System.out.println(hourlyEmployee);
 
 
 

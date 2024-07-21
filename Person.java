@@ -27,7 +27,6 @@ public class Person {
         System.out.println(thisYear);
     }
 
-
     public String getName() {
         return name;
     }
@@ -36,9 +35,6 @@ public class Person {
         this.name = name;
     }
 
-    public int getBirthYear() {
-        return birthYear;
-    }
 
     public void setBirthYear(int birthYear) {
         this.birthYear = birthYear;
@@ -57,6 +53,7 @@ public class Person {
                 "name='" + name + '\'' +
                 ", birthYear=" + birthYear +
                 ", thisYear=" + thisYear +
+                "Age= " + getAge() +
                 '}';
     }
 }
