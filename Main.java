@@ -22,9 +22,18 @@ public class Main {
 //        zoo.testAllAnimals();
 
 
-        Person person = new Person ("Carlos", 1994 );
-        Employee employee = new Employee("Arek", 1990, 7000);
+        Person person = new Person("Krzysiek", 1994);
+        System.out.println(person);
+
+        Employee employee = new Employee("Arek", 1990, 7000, 1);
         System.out.println(employee);
+
+        SalariedEmployee salariedEmployee = new SalariedEmployee("Krystian", 1984, 4023.02, 2, 500);
+        System.out.println(salariedEmployee);
+
+        HourlyEmployee hourlyEmployee = new HourlyEmployee("Monica" , 1999, 174, 67.34, 140.23);
+
+
 
 
 //        person.yearPrint();

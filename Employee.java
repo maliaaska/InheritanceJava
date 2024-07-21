@@ -7,6 +7,7 @@ public class Employee extends Person {
     private static long nextEmployeeId = 1;
     public Employee(String name, int birthYear, double baseSalary, long employeeId) {
         super(name, birthYear);
+        this.baseSalary = baseSalary;
         this.employeeId = nextEmployeeId;
         ++nextEmployeeId;
     }
@@ -27,7 +28,7 @@ public class Employee extends Person {
     }
 
     public double getEmployeeId() {
-        return getEmployeeId();
+        return employeeId;
     }
 
     @Override
@@ -35,7 +36,6 @@ public class Employee extends Person {
         return "Employee{" +
                 "baseSalary=" + baseSalary +
                 ", employeeId=" + employeeId +
-                ", thisYear=" + thisYear +
                 "} " + super.toString();
     }
 }
